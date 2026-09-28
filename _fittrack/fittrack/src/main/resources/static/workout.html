@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workout - FitTrack</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>Fit</span>Track
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item">
+                🏠 <span>Dashboard</span>
+            </a>
+
+            <a href="food.html" class="nav-item">
+                🍎 <span>Food Tracker</span>
+            </a>
+
+            <a href="workout.html" class="nav-item active">
+                🏋️ <span>Workout</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                👤 <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Workout Tracker 🏋️</h1>
+
+                <p>
+                    Record your workouts and stay active.
+                </p>
+            </div>
+
+            <div class="user-info">
+
+                <div class="user-avatar">
+                    👤
+                </div>
+
+                <div>
+                    <strong id="workoutUserName">
+                        User
+                    </strong>
+
+                    <small>
+                        Fitness Member
+                    </small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="welcome-card">
+
+            <div>
+
+                <h2>Keep Moving! 💪</h2>
+
+                <p>
+                    Record your exercise and monitor your fitness activity.
+                </p>
+
+            </div>
+
+            <div class="welcome-icon">
+                🏃
+            </div>
+
+        </section>
+
+
+        <!-- ADD WORKOUT -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>Add Workout</h3>
+
+                    <p>
+                        Enter your workout details.
+                    </p>
+
+                </div>
+
+                <span class="card-icon">
+                    🏋️
+                </span>
+
+            </div>
+
+
+            <form id="workoutForm" class="modern-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Workout Type</label>
+
+                        <select id="workoutType" required>
+
+                            <option value="">
+                                Select workout
+                            </option>
+
+                            <option value="Walking">
+                                Walking
+                            </option>
+
+                            <option value="Running">
+                                Running
+                            </option>
+
+                            <option value="Cycling">
+                                Cycling
+                            </option>
+
+                            <option value="Gym">
+                                Gym
+                            </option>
+
+                            <option value="Yoga">
+                                Yoga
+                            </option>
+
+                            <option value="Swimming">
+                                Swimming
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Duration</label>
+
+                        <input
+                                type="number"
+                                id="duration"
+                                placeholder="Minutes"
+                                min="1"
+                                required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Date</label>
+
+                        <input
+                                type="date"
+                                id="workoutDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                        type="submit"
+                        class="primary-btn"
+                >
+                    + Add Workout
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- WORKOUT LIST -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>Recent Workouts</h3>
+
+                    <p>
+                        Your workout history.
+                    </p>
+
+                </div>
+
+                <span class="card-icon">
+                    🔥
+                </span>
+
+            </div>
+
+
+            <div id="workoutList">
+
+                <p class="empty-message">
+                    Loading workouts...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/workout.js"></script>
+
+</body>
+</html>

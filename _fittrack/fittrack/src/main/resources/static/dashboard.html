@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack Dashboard</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>Fit</span>Track
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="nav-item active">
+                🏠 <span>Dashboard</span>
+            </a>
+
+            <a href="food.html" class="nav-item">
+                🍎 <span>Food Tracker</span>
+            </a>
+
+            <a href="workout.html" class="nav-item">
+                🏋️ <span>Workout</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                👤 <span>Profile</span>
+            </a>
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Track your health and fitness progress.</p>
+            </div>
+
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+                <div>
+                    <strong id="userName">User</strong>
+                    <small>Fitness Member</small>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- WELCOME -->
+        <section class="welcome-card">
+
+            <div>
+                <h2>Welcome back, <span id="welcomeName">User</span> 👋</h2>
+                <p>Stay consistent and keep working towards your fitness goals!</p>
+            </div>
+
+            <div class="welcome-icon">
+                💪
+            </div>
+
+        </section>
+
+
+        <!-- STAT CARDS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon bmi-icon">⚖️</div>
+
+                <div>
+                    <p>BMI</p>
+                    <h2 id="bmiValue">--</h2>
+                    <span id="bmiStatus">Health Status</span>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon calorie-icon">🔥</div>
+
+                <div>
+                    <p>Daily Goal</p>
+                    <h2 id="dailyGoal">--</h2>
+                    <span>Calories</span>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon food-icon">🍎</div>
+
+                <div>
+                    <p>Calories Today</p>
+                    <h2 id="caloriesToday">--</h2>
+                    <span>Consumed</span>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon workout-icon">🏋️</div>
+
+                <div>
+                    <p>Workout</p>
+                    <h2 id="workoutMinutes">--</h2>
+                    <span>Minutes</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- LOWER SECTION -->
+        <section class="dashboard-grid">
+
+            <!-- CALORIE PROGRESS -->
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Daily Calorie Goal</h3>
+                        <p>Your calorie consumption today</p>
+                    </div>
+
+                    <span class="card-icon">🔥</span>
+                </div>
+
+                <div class="progress-section">
+
+                    <div class="progress-info">
+                        <strong id="calorieText">0 / 0 kcal</strong>
+                        <span id="caloriePercentage">0%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                                class="progress-fill"
+                                id="calorieProgress">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEALTH SUMMARY -->
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Health Summary</h3>
+                        <p>Your current health information</p>
+                    </div>
+
+                    <span class="card-icon">❤️</span>
+                </div>
+
+                <div class="health-list">
+
+                    <div class="health-row">
+                        <span>Body Mass Index</span>
+                        <strong id="summaryBMI">--</strong>
+                    </div>
+
+                    <div class="health-row">
+                        <span>Daily Calories</span>
+                        <strong id="summaryCalories">--</strong>
+                    </div>
+
+                    <div class="health-row">
+                        <span>Fitness Status</span>
+                        <strong class="status-good">Active</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+        <section class="quick-section">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-grid">
+
+                <a href="food.html" class="quick-card">
+                    <div>🍎</div>
+                    <h3>Add Food</h3>
+                    <p>Track your meals and calories</p>
+                </a>
+
+                <a href="workout.html" class="quick-card">
+                    <div>🏋️</div>
+                    <h3>Add Workout</h3>
+                    <p>Record your daily exercise</p>
+                </a>
+
+                <a href="profile.html" class="quick-card">
+                    <div>👤</div>
+                    <h3>View Profile</h3>
+                    <p>Manage your personal details</p>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/dashboard.js"></script>
+
+<script>
+    function logout() {
+        localStorage.clear();
+        window.location.href = "index.html";
+    }
+</script>
+
+</body>
+</html>

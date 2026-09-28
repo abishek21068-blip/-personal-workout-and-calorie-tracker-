@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker - FitTrack</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>Fit</span>Track
+        </div>
+
+        <nav>
+            <a href="dashboard.html" class="nav-item">
+                🏠 <span>Dashboard</span>
+            </a>
+
+            <a href="food.html" class="nav-item active">
+                🍎 <span>Food Tracker</span>
+            </a>
+
+            <a href="workout.html" class="nav-item">
+                🏋️ <span>Workout</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                👤 <span>Profile</span>
+            </a>
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Food Tracker 🍎</h1>
+                <p>Track your daily meals and calorie intake.</p>
+            </div>
+
+            <div class="user-info">
+                <div class="user-avatar">👤</div>
+
+                <div>
+                    <strong id="foodUserName">
+                        User
+                    </strong>
+
+                    <small>Fitness Member</small>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="welcome-card">
+
+            <div>
+                <h2>Track Your Nutrition 🥗</h2>
+                <p>
+                    Keep track of what you eat and stay within your
+                    daily calorie goal.
+                </p>
+            </div>
+
+            <div class="welcome-icon">
+                🍎
+            </div>
+
+        </section>
+
+
+        <!-- ADD FOOD -->
+
+        <section class="dashboard-card food-form-card">
+
+            <div class="card-header">
+                <div>
+                    <h3>Add Food</h3>
+                    <p>Enter your meal details below.</p>
+                </div>
+
+                <span class="card-icon">🍽️</span>
+            </div>
+
+
+            <form id="foodForm" class="modern-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Food Name</label>
+                        <input
+                                type="text"
+                                id="foodName"
+                                placeholder="Example: Rice"
+                                required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Meal Type</label>
+
+                        <select id="mealType" required>
+                            <option value="">Select meal</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="Snack">Snack</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Quantity</label>
+
+                        <input
+                                type="number"
+                                id="quantity"
+                                placeholder="Example: 1"
+                                step="0.1"
+                                required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Calories</label>
+
+                        <input
+                                type="number"
+                                id="calories"
+                                placeholder="Example: 250"
+                                required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Date</label>
+
+                        <input
+                                type="date"
+                                id="entryDate"
+                        >
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    + Add Food
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- FOOD LIST -->
+
+        <section class="dashboard-card food-list-card">
+
+            <div class="card-header">
+                <div>
+                    <h3>Today's Food</h3>
+                    <p>Your food entries for today.</p>
+                </div>
+
+                <span class="card-icon">🔥</span>
+            </div>
+
+            <div id="foodList">
+                <p class="empty-message">
+                    Loading food entries...
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/food.js"></script>
+
+</body>
+</html>

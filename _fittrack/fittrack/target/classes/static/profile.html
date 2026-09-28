@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile - FitTrack</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>Fit</span>Track
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-item">
+                🏠 <span>Dashboard</span>
+            </a>
+
+            <a href="food.html" class="nav-item">
+                🍎 <span>Food Tracker</span>
+            </a>
+
+            <a href="workout.html" class="nav-item">
+                🏋️ <span>Workout</span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                👤 <span>Profile</span>
+            </a>
+
+        </nav>
+
+
+        <button
+                class="logout-btn"
+                onclick="logout()"
+        >
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>My Profile 👤</h1>
+
+                <p>
+                    View your personal and health information.
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <div class="user-avatar">
+                    👤
+                </div>
+
+                <div>
+
+                    <strong id="profileTopName">
+                        User
+                    </strong>
+
+                    <small>
+                        Fitness Member
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PROFILE HEADER -->
+
+        <section class="profile-header-card">
+
+            <div class="big-avatar">
+                👤
+            </div>
+
+
+            <div>
+
+                <h2 id="profileName">
+                    Loading...
+                </h2>
+
+                <p id="profileEmail">
+                    Loading...
+                </p>
+
+                <span class="profile-badge">
+                    FitTrack Member
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>Personal Information</h3>
+
+                    <p>
+                        Your registered account information.
+                    </p>
+
+                </div>
+
+                <span class="card-icon">
+                    👤
+                </span>
+
+            </div>
+
+
+            <div class="profile-info-grid">
+
+
+                <div class="profile-info-item">
+
+                    <span>Name</span>
+
+                    <strong id="profileNameInfo">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>Email</span>
+
+                    <strong id="profileEmailInfo">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>Age</span>
+
+                    <strong id="profileAge">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>Gender</span>
+
+                    <strong id="profileGender">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>Height</span>
+
+                    <strong id="profileHeight">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>Weight</span>
+
+                    <strong id="profileWeight">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>Activity Level</span>
+
+                    <strong id="profileActivity">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HEALTH -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>Health Information</h3>
+
+                    <p>
+                        Your fitness information.
+                    </p>
+
+                </div>
+
+                <span class="card-icon">
+                    ❤️
+                </span>
+
+            </div>
+
+
+            <div class="health-info-grid">
+
+                <div class="health-box">
+
+                    <span>⚖️</span>
+
+                    <h3>Body Weight</h3>
+
+                    <strong id="healthWeight">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="health-box">
+
+                    <span>📏</span>
+
+                    <h3>Height</h3>
+
+                    <strong id="healthHeight">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="health-box">
+
+                    <span>🏃</span>
+
+                    <h3>Activity</h3>
+
+                    <strong id="healthActivity">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/profile.js"></script>
+
+</body>
+</html>
